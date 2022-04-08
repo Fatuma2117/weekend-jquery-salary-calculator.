@@ -1,16 +1,21 @@
 $(document).ready(readyNow)
 let employee = []
 ////Psuedo Code!! 
-//input form should collect data 
-// add information for submit button 
-// append inputs to DOM
-// store the input information 
-// clear input fields
-// calculate monthly costs
-// if monthly costs> 20000 return red background
+//input form should collect data✅
+// add information for submit button ✅
+// append inputs to DOM✅
+// store the input information ✅
+// clear input fields✅
+// calculate monthly costs✅
+// if monthly costs> 20000 return red background ✅
+// create delete button and append to dom
+// click delete button works 
+
 
 function readyNow() {
     $('#submitEmployee').on('click', addNewEmployee)
+        addDeleteButton()
+
 }
 function addNewEmployee() {
     // console.log('working?') 
@@ -20,7 +25,6 @@ function addNewEmployee() {
         idInput: $("#idInput").val(),
         titleInput: $("#titleInput").val(),
         annualInput: $("#annualInput").val()
-
     }
     employee.push(inputs)
     // console.log(inputs.annualInput)
@@ -33,6 +37,7 @@ function addNewEmployee() {
     <td> ${inputs.annualInput}</td>
     </tr>`);
 
+
     $("#firstNameInput").val('');
     $("#lastNameInput").val('');
     $("#idInput").val('');
@@ -40,7 +45,7 @@ function addNewEmployee() {
     $("#annualInput").val('');
 
     calculateTotalMonthly();
-
+    // addDeleteButton()
 }
 
 function calculateTotalMonthly() {
@@ -51,7 +56,7 @@ function calculateTotalMonthly() {
         //for each employee, add up total annual/12
        monthlyTotal += Number(employee[i].annualInput/12)
        if(monthlyTotal > 20000) { 
-        document.getElementById("totalMonthlyOut").style.color= "red"
+        $("#totalMonthlyOut").addClass('overBudget')
        }
     }
 // console.log(monthlyTotal)    // display calculateTotalMonthly
@@ -59,6 +64,11 @@ let outPut = $('#totalMonthlyOut')
 outPut.empty();
 outPut.append(Number(monthlyTotal))
 
+
+}
+
+function addDeleteButton(){
+    $('#tableBody').append(`<tr><button>Delete </button></tr>)`)
 
 }
 
