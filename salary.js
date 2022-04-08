@@ -14,7 +14,9 @@ let employee = []
 
 function readyNow() {
     $('#submitEmployee').on('click', addNewEmployee)
-        addDeleteButton()
+    // $('.deleteButton').on('click', addDeleteButton)
+    // addDeleteButton();
+
 
 }
 function addNewEmployee() {
@@ -35,7 +37,7 @@ function addNewEmployee() {
     <td> ${inputs.idInput}</td>
     <td> ${inputs.titleInput}</td>
     <td> ${inputs.annualInput}</td>
-    </tr>`);
+    </tr>`,`<td><button class= "deleteButton"> Delete </button></td>`);
 
 
     $("#firstNameInput").val('');
@@ -45,7 +47,8 @@ function addNewEmployee() {
     $("#annualInput").val('');
 
     calculateTotalMonthly();
-    // addDeleteButton()
+    // addDeleteButton();
+console.log($('.deleteButton'))
 }
 
 function calculateTotalMonthly() {
@@ -67,10 +70,10 @@ outPut.append(Number(monthlyTotal))
 
 }
 
-function addDeleteButton(){
-    $('#tableBody').append(`<tr><button>Delete </button></tr>)`)
-
-}
+// function addDeleteButton(){
+// $('.deleteButton').closest('tr').remove()
+// $('this').remove(addNewEmployee)
+// }
 
 
 
