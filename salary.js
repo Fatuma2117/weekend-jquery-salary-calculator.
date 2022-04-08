@@ -9,36 +9,38 @@ $(document).ready(readyNow)
 // calculate monthly costs
 // if monthly costs> 20000 return red background
 
-
-
-
-
-
 function readyNow(){
 $('#submitEmployee').on('click', addClickHandler)
 }
 
-function addClickHandler () {
+function addClickHandler() {
 console.log('working?')
-// $('#studentList').append(` <li> ${name}</li>`);
-
- let firstInput = $("#firstNameInput").val();
+let firstInput = $("#firstNameInput").val();
 let lastInput = $("#lastNameInput").val();
 let idInput = $("#idInput").val();
 let titleInput = $("#titleInput").val();
 let annualInput = $("#annualInput").val();
 
-
-$('#tableBody').append(`<tr>
-<td> ${firstInput}</td>
-<td>${lastInput} </td>
-<td> ${idInput}</td>
-<td> ${titleInput}</td>
-<td> ${annualInput}</td>
-</tr>`);
+ $('#tableBody').append(`<tr>
+    <td> ${firstInput}</td>
+    <td>${lastInput} </td>
+    <td> ${idInput}</td>
+    <td> ${titleInput}</td>
+    <td> ${annualInput}</td>
+    </tr>`);
+$("#firstNameInput").val('');
+$("#lastNameInput").val('');
+$("#idInput").val('');
+$("#titleInput").val('');
+$("#annualInput").val('');
 
 }
 
+function totalCalculator(){
+// the total monthly costs of $("#annualInput").
+
+
+}
 
 
 
