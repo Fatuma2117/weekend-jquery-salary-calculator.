@@ -51,7 +51,7 @@ function calculateTotalMonthly() {
         //for each employee, add up total annual/12
        monthlyTotal += Number(employee[i].annualInput/12)
        if(monthlyTotal > 20000) { 
-        $('#totalMonthlyOut').style.color = 'red'
+        document.getElementById("totalMonthlyOut").style.color= "red"
        }
     }
 // console.log(monthlyTotal)    // display calculateTotalMonthly
