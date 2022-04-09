@@ -14,10 +14,8 @@ let employee = []
 
 function readyNow() {
     $('#submitEmployee').on('click', addNewEmployee)
-    // $('.deleteButton').on('click', addDeleteButton)
     // addDeleteButton();
-
-
+    $(document).on('click','.deleteEmployee',addDeleteButton)
 }
 function addNewEmployee() {
     // console.log('working?') 
@@ -30,14 +28,15 @@ function addNewEmployee() {
     }
     employee.push(inputs)
     // console.log(inputs.annualInput)
+    let deleteButton = `<td><button class= "deleteButton"> Delete </button></td>`
 
-    $('#tableBody').append(`<tr>
+    $('.tableBody').append(`<tr class ="deleteEmployee">
     <td> ${inputs.firstInput}</td>
     <td>${inputs.lastInput} </td>
     <td> ${inputs.idInput}</td>
     <td> ${inputs.titleInput}</td>
     <td> ${inputs.annualInput}</td>
-    </tr>`,`<td><button class= "deleteButton"> Delete </button></td>`);
+    <td> ${deleteButton}</td></tr>`);
 
 
     $("#firstNameInput").val('');
@@ -48,7 +47,8 @@ function addNewEmployee() {
 
     calculateTotalMonthly();
     // addDeleteButton();
-console.log($('.deleteButton'))
+    // $('#deleteButton').on('click','.tableBody',addDeleteButton)
+
 }
 
 function calculateTotalMonthly() {
@@ -58,22 +58,24 @@ function calculateTotalMonthly() {
     for (let i = 0; i < employee.length; i++) {
         //for each employee, add up total annual/12
        monthlyTotal += Number(employee[i].annualInput/12)
-       if(monthlyTotal > 20000) { 
-        $("#totalMonthlyOut").addClass('overBudget')
+       if(monthlyTotal >= 20000) { 
+        $("#totalMonthlyOut").css('color','red');
+        console.log('conditional is working')
        }
     }
 // console.log(monthlyTotal)    // display calculateTotalMonthly
 let outPut = $('#totalMonthlyOut')
 outPut.empty();
 outPut.append(Number(monthlyTotal))
-
+console.log(monthlyTotal)
 
 }
 
-// function addDeleteButton(){
-// $('.deleteButton').closest('tr').remove()
-// $('this').remove(addNewEmployee)
-// }
+function addDeleteButton(){
+console.log('delete button connected to functions?')
+$(this).remove()
+
+}
 
 
 

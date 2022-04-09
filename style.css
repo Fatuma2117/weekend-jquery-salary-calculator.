@@ -1,11 +1,43 @@
+header{
+background-color: #00ff37;
+
+
+}
+body{
+background-color: orange;
+
+
+
+}
+
+
+
+
 h1{
     text-align: center;
+    color: blueviolet;
+    text-shadow: 2px 4px #ff0000;
+    font-size: 55px;
+    background-color: rgb(195, 255, 0);
+
+    
 }
 h2{
     text-align: center;
- 
+    color: rgb(103, 6, 103);
+    text-shadow: 2px 4px #ff1100;
+    font-size: 40px;
 }
 
-.overBudget{
-    color: red;
+.tableBody{
+    background-color: aqua;
 }
+
+
+table, th, td{
+    border: 3px solid;
+  }
+  table {
+    width: 100%;
+  }
+

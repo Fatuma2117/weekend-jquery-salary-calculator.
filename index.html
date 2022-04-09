@@ -13,8 +13,10 @@
 </head>
 
 <body>
+  <header>
   <h1>Salary Calculator </h1>
   <h2> Add Employee </h2>
+</header>
   <table>
     <thead>
       <tr>
@@ -23,9 +25,10 @@
         <th> ID Number</th>
         <th> Job Title </th>
         <th> Annual Salary </th>
+        <th> Delete </th>
       </tr>
     </thead>
-    <tbody id="tableBody">
+    <tbody class="tableBody">
       <input id="firstNameInput" placeholder="First Name"></input>
       <input id="lastNameInput" placeholder="Last Name"></input>
       <input id="idInput" placeholder="Id Number"></input>
@@ -35,7 +38,7 @@
       <!-- <td><button id="deleteButton"> Delete </button></td> -->
     </tbody>
     <tfoot>
-      <td> Total Monthly Cost:<span class = "overBudget"id="totalMonthlyOut"> </span> </td>
+      <td> Total Monthly Cost:<span id="totalMonthlyOut"> </span> </td>
     </tfoot>
   </table>
 
