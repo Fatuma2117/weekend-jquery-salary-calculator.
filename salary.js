@@ -48,7 +48,6 @@ function addNewEmployee() {
     calculateTotalMonthly();
     // addDeleteButton();
     // $('#deleteButton').on('click','.tableBody',addDeleteButton)
-
 }
 
 function calculateTotalMonthly() {
@@ -70,9 +69,8 @@ outPut.append(Number(monthlyTotal))
 console.log(monthlyTotal)
 
 }
-
 function addDeleteButton(){
-console.log('delete button connected to functions?')
+// console.log('delete button connected to functions?')
 $(this).remove()
 
 }

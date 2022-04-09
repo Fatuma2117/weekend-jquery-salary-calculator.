@@ -1,43 +1,38 @@
-header{
-background-color: #00ff37;
 
-
-}
 body{
-background-color: orange;
-
-
-
+background-color: #bbbdf7;
+border: rgb(236, 18, 18);
 }
-
-
-
 
 h1{
     text-align: center;
-    color: blueviolet;
-    text-shadow: 2px 4px #ff0000;
+    color: rgb(58, 15, 68);
+    text-shadow: 2px 4px #dd47f4;
     font-size: 55px;
-    background-color: rgb(195, 255, 0);
-
-    
 }
 h2{
     text-align: center;
-    color: rgb(103, 6, 103);
-    text-shadow: 2px 4px #ff1100;
-    font-size: 40px;
+    color:  rgb(68, 15, 65);
+    text-shadow: 2px 4px #ec53e4;
+    font-size: 35px;
 }
 
 .tableBody{
-    background-color: aqua;
+    background-color: rgb(220, 195, 233);
+    font-size: 20px;
 }
 
-
 table, th, td{
-    border: 3px solid;
+    border: 2px solid white;
   }
   table {
     width: 100%;
   }
+
+.tableInputs{
+border:rgb(202, 150, 239) 2px solid ;
+ background-color:rgb(229, 191, 238);
+width: auto;
+
+}
 
