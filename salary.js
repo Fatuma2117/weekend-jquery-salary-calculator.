@@ -15,7 +15,7 @@ let employee = []
 function readyNow() {
     $('#submitEmployee').on('click', addNewEmployee)
     // addDeleteButton();
-    $(document).on('click','.deleteEmployee',addDeleteButton)
+    $(document).on('click','.deleteButton',addDeleteButton)
 }
 function addNewEmployee() {
     // console.log('working?') 
@@ -46,8 +46,6 @@ function addNewEmployee() {
     $("#annualInput").val('');
 
     calculateTotalMonthly();
-    // addDeleteButton();
-    // $('#deleteButton').on('click','.tableBody',addDeleteButton)
 }
 
 function calculateTotalMonthly() {
@@ -59,20 +57,21 @@ function calculateTotalMonthly() {
        monthlyTotal += Number(employee[i].annualInput/12)
        if(monthlyTotal >= 20000) { 
         $("#totalMonthlyOut").css('color','red');
-        console.log('conditional is working')
+        // console.log('conditional is working')
        }
     }
 // console.log(monthlyTotal)    // display calculateTotalMonthly
 let outPut = $('#totalMonthlyOut')
 outPut.empty();
 outPut.append(Number(monthlyTotal))
-console.log(monthlyTotal)
+// console.log(monthlyTotal)
 
 }
-function addDeleteButton(){
-// console.log('delete button connected to functions?')
-$(this).remove()
 
+
+function addDeleteButton(){
+console.log('delete button connected to functions?')
+$(this).closest('tr').remove()
 }
 
 

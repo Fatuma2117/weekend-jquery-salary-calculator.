@@ -1,38 +1,42 @@
 
 body{
-background-color: #bbbdf7;
-border: rgb(236, 18, 18);
+background-color: bisque;
+
 }
 
 h1{
     text-align: center;
     color: rgb(58, 15, 68);
-    text-shadow: 2px 4px #dd47f4;
+    text-shadow: 2px 4px goldenrod;
     font-size: 55px;
 }
 h2{
     text-align: center;
     color:  rgb(68, 15, 65);
-    text-shadow: 2px 4px #ec53e4;
+    text-shadow: 2px 4px goldenrod;
     font-size: 35px;
 }
 
 .tableBody{
-    background-color: rgb(220, 195, 233);
+    background-color: beige;
     font-size: 20px;
 }
 
 table, th, td{
-    border: 2px solid white;
+    border: 2px solid rgb(68, 15, 65);
   }
   table {
     width: 100%;
   }
 
 .tableInputs{
-border:rgb(202, 150, 239) 2px solid ;
- background-color:rgb(229, 191, 238);
+border: rgb(68, 15, 65) 2px solid ;
+ background-color:beige;
 width: auto;
+font-size: 18px ;
 
+}
+.submit{
+background-color: goldenrod;
 }
 
