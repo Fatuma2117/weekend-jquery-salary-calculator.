@@ -13,9 +13,9 @@ let employee = []
 
 
 function readyNow() {
-    $('#submitEmployee').on('click', addNewEmployee)
+    $('#submitEmployee').on('click', addNewEmployee);
     // addDeleteButton();
-    $(document).on('click','.deleteButton',addDeleteButton)
+    $(document).on('click','.deleteButton',addDeleteButton);
 }
 function addNewEmployee() {
     // console.log('working?') 
@@ -28,7 +28,7 @@ function addNewEmployee() {
     }
     employee.push(inputs)
     // console.log(inputs.annualInput)
-    let deleteButton = `<td><button class= "deleteButton"> Delete </button></td>`
+    let deleteButton = `<td><button class= "deleteButton"> Delete </button></td>`;
 
     $('.tableBody').append(`<tr class ="deleteEmployee">
     <td> ${inputs.firstInput}</td>
@@ -70,8 +70,8 @@ outPut.append(Number(monthlyTotal))
 
 
 function addDeleteButton(){
-console.log('delete button connected to functions?')
-$(this).closest('tr').remove()
+// console.log('delete button connected to functions?');
+$(this).closest('tr').remove();
 }
 
 

@@ -1,9 +1,9 @@
-# Project Name
+# Salary Calculator
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Duration 3 Day Sprint
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+This project is a salary calculator that users can input their data onto the website and display the list of employees information collected from their company. Also, this project generates the total monthly income from your data and displays red numbers when the total monthly exceeds $20,000. 
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+
